@@ -1,0 +1,16 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose-dev-in-container.yml"
+	],
+
+	"service": "myplumber",
+
+	"forwardPorts": [8787, 5050],
+
+	"workspaceFolder": "/workspace",
+
+	"postCreateCommand": "pwd; ls -al; /init"
+}

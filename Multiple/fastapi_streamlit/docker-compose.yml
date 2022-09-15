@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+    api:
+        build: 
+            context: ./backend_fastapi
+            target: final-islocaldevelopment-false
+
+        ports:
+            - "5050:5050"
+
+    ui:
+        build: 
+            context: ./frontend_streamlit
+            target: final-islocaldevelopment-false
+
+        ports:
+            - "8501:8501"
+      

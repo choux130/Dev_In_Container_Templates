@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+    purercode:
+        build: 
+            context: ./code
+            target: final-islocaldevelopment-false
+
+            

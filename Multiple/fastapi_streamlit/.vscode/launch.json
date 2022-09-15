@@ -1,0 +1,28 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Python: FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "cwd": "${workspaceFolder}/backend_fastapi",
+            "args": [
+              "main:app",
+              "--reload",
+              "--port", 
+              "8888"
+            ]
+          },
+          {
+            "name": "Debug streamlit",
+            "type": "python",
+            "request": "launch",
+            "program": "/venv/bin/streamlit", 
+            "args": [
+                "run",
+                "/workspace/frontend_streamlit/main.py"
+            ]
+        }
+    ]
+}

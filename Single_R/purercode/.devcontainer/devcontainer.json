@@ -1,0 +1,16 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose-dev-in-container.yml"
+	],
+
+	"service": "purercode",
+
+	"forwardPorts": [8787],
+
+	"workspaceFolder": "/workspace",
+
+	"postCreateCommand": "pwd; ls -al; /init"
+}
