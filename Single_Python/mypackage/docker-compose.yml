@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+  mypackage:
+    build:
+      context: ./code
+      target: final-islocaldevelopment-false
