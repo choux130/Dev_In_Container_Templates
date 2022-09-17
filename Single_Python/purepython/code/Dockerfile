@@ -11,9 +11,7 @@ RUN python -m pip install --upgrade pip
 
 RUN python -m pip install numpy==1.23.0
 RUN python -m pip install pandas==1.4.2
-RUN python -m pip install fastapi==0.68.2
-RUN python -m pip install pydantic==1.9.1
-RUN python -m pip install uvicorn==0.18.1
+RUN python -m pip install pytest==7.1.1
 
 # set up env var
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -31,13 +29,11 @@ RUN chown -R pred:pred /home/pred
 RUN chmod 755 /home/pred
 USER pred
 
-# Expose port 
-EXPOSE 5050
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5050"]
+CMD ["sleep", "infinity"]
 
 FROM base as final-islocaldevelopment-true
 
 ENV PATH=/venv/bin:$PATH
 RUN python -m pip install ipykernel==5.5.5 
 RUN python -m pip install traitlets==5.0.5
-RUN python -m pip install pytest
+
