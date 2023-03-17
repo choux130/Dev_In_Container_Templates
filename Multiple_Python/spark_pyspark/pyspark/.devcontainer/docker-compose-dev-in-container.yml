@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  spark-worker:
+    deploy:
+      replicas: 2
+      
+  pyspark:
+    build:
+      context: ./pyspark
+      target: final-islocaldevelopment-true
+
+    volumes:
+      - .:/workspace:cached
+ 
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
