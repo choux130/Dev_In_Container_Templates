@@ -1,5 +1,5 @@
 # **dev_in_container**
-This repo includes initial container templates on developing for different final output (REST API, web app, package creation, or just pure coding) in R and python.
+This repo includes initial container templates on developing for different final output (REST API, web app, package creation, or just pure coding) in R and python, spark, and mysql.
 
 ## **Requirements (These are the working version I used in my local)**
 * VScode (https://code.visualstudio.com/download )
