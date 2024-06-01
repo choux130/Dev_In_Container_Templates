@@ -1,0 +1,22 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+
+	"service": "devcontainer",
+
+	"workspaceFolder": "/workspace",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter",
+				"snowflake.snowflake-vsc",
+				"hashicorp.terraform"
+			]
+		}
+	}
+}

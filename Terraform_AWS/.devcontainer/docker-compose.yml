@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  devcontainer:
+    build: 
+        context: .
+        dockerfile: "Dockerfile"
+        # target: final-islocaldevelopment-true
+
+    volumes:
+      - ..:/workspace:cached
+      - $HOME/.aws:/root/.aws:ro
+
+    # env_file:
+    #   - ./creds/.env
+    
+    environment:
+      - USERNAME=$USERNAME
+
+      # config for terraform
+      # - TF_PLUGIN_CACHE_DIR=/workspace/tf_cache/.terraform.d/plugin-cache
+      - CHECKPOINT_DISABLE=false
+      # - TF_LOG=TRACE
+      # - TF_LOG_PATH="workspace/tf_cache/mylog.txt"
+
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  
