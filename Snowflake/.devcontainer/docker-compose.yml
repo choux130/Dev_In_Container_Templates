@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  devcontainer:
+    build: 
+        context: .
+        dockerfile: "Dockerfile"
+        # target: final-islocaldevelopment-true
+
+    volumes:
+      - ..:/workspace:cached
+      - $HOME/.aws:/root/.aws:ro
+      - ./creds/config.toml:/root/.snowflake/config.toml
+
+    env_file:
+      - ./creds/.env
+    
+    environment:
+      - USERNAME=${USERNAME}
+
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  

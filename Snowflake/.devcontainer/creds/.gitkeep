@@ -1,0 +1,17 @@
+This folder has two files which has snowflake credentials includes
+1. .env, default connection credentials
+    ```
+    SNOWFLAKE_CONNECTIONS_DEFAULT_ACCOUNT=<organization-name>-<account-name>
+    SNOWFLAKE_CONNECTIONS_DEFAULT_USER=<username>
+    SNOWFLAKE_CONNECTIONS_DEFAULT_PASSWORD=<password>
+    ```
+2. config.toml, save multiple different connection credentials
+    ```
+    [connections.default]
+    [connections.<connection-name>]
+    account = "<organization-name>-<account-name>"
+    user = "<username>"
+    password = "<password>"
+    warehouse = "<warehouse-name>"
+    role = "<role-name>"
+    ```
